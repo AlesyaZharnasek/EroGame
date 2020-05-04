@@ -1,0 +1,6 @@
+f|Ann|160|50|(.)(.)|to show my boobs!;)|2
+f|Kate|156|55|Where is the money!?|rich men $$$|1
+f|Darya|165|60|I was offended :(|sweets|2
+m|Alex|180|90|I am strong!|protein and exercise!|15
+m|Ivan|176|65|I am geek|Minecraft and WoW!|16
+m|Max|180|85|I am rich|OOP and Java!|17

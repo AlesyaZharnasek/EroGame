@@ -7,8 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PeopleRepositoryTxt implements IPeopleRepository {
-
+public class PeopleRepositoryTxt extends BaseRepository implements IPeopleRepository {
 
     @Override
     public List<Human> loadPeople()  {
@@ -17,7 +16,8 @@ public class PeopleRepositoryTxt implements IPeopleRepository {
         ArrayList<Human> people = new ArrayList<Human>();
         try {
 
-            fstream = new FileInputStream("src/main/resources/people_en.txt");
+            fstream = new FileInputStream(getPath(ConstApp.PEOPLE_FILE));
+
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
             String[] tokens;

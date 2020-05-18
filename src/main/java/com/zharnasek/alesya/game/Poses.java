@@ -2,38 +2,38 @@ package com.zharnasek.alesya.game;
 
 public class Poses {
 
-    private String Name;
-    private String Description;
-    private String Profit;
+    private String name;
+    private String description;
+    private String profit;
 
-    public Poses(String Name, String Description, String Profit){
-        this.Name = Name;
-        this.Description = Description;
-        this.Profit = Profit;
+    public Poses(String name, String description, String profit) {
+        this.name = name;
+        this.description = description;
+        this.profit = profit;
     }
 
-    public void setPoseName(String Name) {
-        this.Name = Name;
+    public void setPoseName(String name) {
+        this.name = name;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setDescription(String Description) {
-        this.Description = Description;
+        this.description = Description;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
-    public void setProfit(String Profit) {
-        this.Profit = Profit;
+    public void setProfit(String profit) {
+        this.profit = profit;
     }
 
     public String getProfit() {
-        return Profit;
+        return profit;
     }
 
     public void descrOutput () {

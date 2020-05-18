@@ -1,25 +1,28 @@
 package com.zharnasek.alesya.game;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PoseRepositoryTxt extends BaseRepository implements IPoseRepository {
+public class ActivitiesRepositoryTxt extends BaseRepository implements IActivitiesRepository {
 
     @Override
-    public List<Poses> loadPoses() {
+    public List<Activities> loadActivities() {
 
-        ArrayList<Poses> posesDescr = new ArrayList<Poses>();
+        ArrayList<Activities> activDescr = new ArrayList<Activities>();
         FileInputStream fstream = null;
         BufferedReader br = null;
         try {
-            fstream = new FileInputStream(getPath(ConstApp.POSES_FILE));
+            fstream = new FileInputStream(getPath(ConstApp.ACTIVITIES_FILE));
             br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
             String[] tokens;
             while ((strLine = br.readLine()) != null) {
                 tokens = strLine.split("\\|");
-                posesDescr.add(new Poses(tokens[0], tokens[1], tokens[2]));
+                activDescr.add(new Activities(tokens[0], tokens[1], tokens[2]));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -32,7 +35,7 @@ public class PoseRepositoryTxt extends BaseRepository implements IPoseRepository
                 System.out.println(ignore);
             }
         }
-        return posesDescr;
+        return activDescr;
     }
-
 }
+

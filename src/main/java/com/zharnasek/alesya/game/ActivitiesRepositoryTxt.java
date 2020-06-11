@@ -22,7 +22,7 @@ public class ActivitiesRepositoryTxt extends BaseRepository implements IActiviti
             String[] tokens;
             while ((strLine = br.readLine()) != null) {
                 tokens = strLine.split("\\|");
-                activDescr.add(new Activities(tokens[0], tokens[1], tokens[2]));
+                activDescr.add(new Activities(Gender.valueOf(tokens[0]), tokens[1], tokens[2]));
             }
         } catch (IOException e) {
             e.printStackTrace();
